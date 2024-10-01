@@ -4,7 +4,44 @@
 ## Code Setup
 
 ## Code Overview
-### 1.Loading dataset and data exploration
+
+### 1.Loading packages, loading dataset and data exploration
+Importing Necessary Packages
+The code begins by importing essential libraries:
+NumPy for numerical operations,
+Pandas for data manipulation and analysis,
+Seaborn and Matplotlib for data visualization
+
+![image](https://github.com/user-attachments/assets/3d156498-ca9b-4c44-83b6-e0c64aa28c89)
+
+
+The pd.read_csv function is used to read a CSV file containing crime data into a Pandas DataFrame named crime_df. This file is located at a specified path on the user's machine.
+
+![image](https://github.com/user-attachments/assets/59fac361-f954-48ae-b838-bb64a457c4a0)
+
+Using the info() method on the DataFrame provides a summary of the dataset, which includes:
+
+Number of entries: 978,628, indicating the total number of crime records.
+Data columns: 28 columns, such as DR_NO (report number), DATE OCC (date of occurrence), Vict Age (victim age), Weapon Desc (weapon used), and others.
+Non-null counts: Shows that most columns have no missing values except for a few like Mocodes, Vict Sex, and Vict Descent, indicating some records are incomplete.
+Data types: Describes the data types of each column, such as int64, float64, and object, which helps understand how to handle the data.
+
+![image](https://github.com/user-attachments/assets/26a5ee7c-a949-411e-937e-29d71fd79cfb)
+
+The head() method displays the first five rows of the DataFrame. This snapshot allows for a quick look at the data's format and the types of information it contains
+
+![image](https://github.com/user-attachments/assets/6838118a-616e-4ed4-b966-e431bb805294)
+
+The describe() function is applied to specific columns (Vict Age, LAT, LON, Crm Cd) to generate a statistical summary. This summary includes:
+
+Count: Number of non-null entries.
+Mean: Average value for each numeric column (e.g., average victim age is approximately 29 years).
+Standard Deviation (std): Measures variability; a higher value indicates more spread in the data.
+Min/Max Values: Ranges of values for each column (e.g., victim age ranges from -4 to 120 years).
+Percentiles: Provides insights into the distribution of the data, indicating that 25% of victims are under age 0, and 75% are under age 44.
+
+![image](https://github.com/user-attachments/assets/3e552bb5-a323-4346-b53b-7b0d92c7af29)
+
 
 ### 2.Victim Demographic Analysis
 The Victim Demographic Analysis examines how crimes impact individuals based on their sex, descent, and age. It explores the distribution of victims by gender and ethnicity, while also analyzing age differences within these groups. This provides key insights into which demographics are most affected by crime, helping identify patterns and potential vulnerabilities.
@@ -85,13 +122,140 @@ The resulting bar graph visualizes the number of crimes reported for each hour o
 
 
 ### 4.Crime Status Analysis
+The Crime Status Analysis provides an overview of crime trends and patterns within a specific area by analyzing reported crime data over a defined period. It aims to identify the frequency of different crime types, peak periods of criminal activity, and the demographics of victims. Additionally, the analysis evaluates crime resolution rates and hotspots, helping law enforcement agencies allocate resources effectively and inform community safety measures. By utilizing descriptive statistics and data visualization, this analysis offers actionable insights that enhance public safety and support strategic decision-making for stakeholders.
+
+#### The questions we are trying to answer in this section
+
+What is the frequency distribution of different crime statuses (resolved, pending, etc.)?
+
+How do the crime statuses compare visually using a pie chart?
+
+#### The Code
+
+What is the frequency distribution of different crime statuses (resolved, pending, etc.)?
+
+![image](https://github.com/user-attachments/assets/3260ddff-9a40-415a-8b59-494b164c5fbd)
+
+How do the crime statuses compare visually using a pie chart?
+
+![image](https://github.com/user-attachments/assets/e07f82a1-9dbb-4762-8f80-722549e6c370)
+
 
 ### 5.Weapon Usage in Crimes
+The Weapon Usage in Crimes analysis examines the types of weapons employed in various criminal activities to identify trends and correlations between weapon usage and specific crime types. By categorizing crimes based on the weapons involved, this analysis helps to uncover patterns that may inform law enforcement strategies and prevention efforts. It utilizes data visualizations, such as heatmaps, to illustrate the relationship between weapon types and crime occurrences, enabling stakeholders to understand the prevalence of certain weapons in criminal offenses. This information is crucial for developing targeted interventions and improving community safety initiatives.
+
+#### The questions we are trying to answer in this section
+
+What are the most common weapons used in crimes?
+
+What types of weapons are most commonly used in different categories of crime?
+
+How many crimes involve the use of a weapon compared to those without?
+
+How does the age of victims differ between crimes involving weapons and those without?
+
+#### The Code
+
+What are the most common weapons used in crimes?
+
+![image](https://github.com/user-attachments/assets/02f4dabe-f3e8-4349-8b14-9b6b05c05eef)
+
+What types of weapons are most commonly used in different categories of crime?
+
+![image](https://github.com/user-attachments/assets/d923a0b0-eea9-48df-bb94-dbd923ae9122)
+
+![image](https://github.com/user-attachments/assets/74d0ba25-417a-40b8-bba4-3ee6798e2293)
+
+How many crimes involve the use of a weapon compared to those without?
+
+![image](https://github.com/user-attachments/assets/4cef472a-124f-49ac-9778-7a8de4c2b71e)
+
+
+How does the age of victims differ between crimes involving weapons and those without?
+
+![image](https://github.com/user-attachments/assets/882940e6-f978-4c23-9d18-d1a5502a06fb)
+
 
 ### 6.Crime Locations 
+The Crime Locations analysis focuses on identifying and visualizing the geographical distribution of criminal activities within various areas. By mapping crime occurrences, this analysis reveals hotspots where certain types of crimes are more prevalent, aiding law enforcement and policymakers in resource allocation and strategic planning. Utilizing spatial data and visual representations, such as choropleth maps or bar charts, the analysis highlights trends in crime distribution across different neighborhoods or regions. This information is vital for community safety initiatives and can inform targeted interventions to reduce crime rates in high-risk areas.
+
+#### The questions we are trying to answer in this section
+
+What are the top 10 locations where crimes are most frequently committed?
+
+How do the number of crimes vary across different premises?
+
+#### The Code
+What are the top 10 locations where crimes are most frequently committed?
+
+![image](https://github.com/user-attachments/assets/b4757034-d53d-4b41-b6ca-42eb6d2f5154)
+
+How do the number of crimes vary across different premises?
+
+![image](https://github.com/user-attachments/assets/b1be14cf-41fa-41aa-91c2-eb8bc4df588c)
+
 
 ### 7.Crime Resolution Time Analysis
+The Crime Resolution Time Analysis examines the duration it takes for law enforcement agencies to resolve criminal cases from the time they are reported. By analyzing data on case resolution times, this section aims to identify patterns and factors that influence how quickly crimes are solved. Visualizations, such as histograms or box plots, may be employed to illustrate the distribution of resolution times across different crime types and areas. This analysis is crucial for assessing the efficiency of the criminal justice system, identifying potential delays, and highlighting areas where improvements can be made to expedite case resolutions, ultimately enhancing public trust and safety.
+
+#### The questions we are trying to answer in this section
+
+How long does it typically take for a crime to be reported after it occurs?
+
+What is the distribution of the time between crime occurrence and reporting when outliers are removed?
+
+#### The Code
+
+How long does it typically take for a crime to be reported after it occurs?
+
+![image](https://github.com/user-attachments/assets/be2e79a5-7c84-4567-b8cc-e04a43436d63)
+
+
+What is the distribution of the time between crime occurrence and reporting when outliers are removed?
+
+![image](https://github.com/user-attachments/assets/cd64dc9c-db98-4f86-bd92-2e3dea5afef8)
+
 
 ### 8.Correlation Matrix
+The Correlation Matrix section explores the relationships between various factors related to crime data, such as crime types, victim characteristics, weapon usage, and geographic locations. By calculating correlation coefficients, this analysis identifies how strongly different variables are related to one another, helping to uncover underlying patterns and trends in the data. Visual representations, such as heatmaps, may be used to illustrate these correlations, making it easier to spot significant associations. Understanding these correlations can inform law enforcement strategies, resource allocation, and preventive measures by highlighting factors that may contribute to crime patterns and outcomes.
+
+#### The questions we are trying to answer in this section
+
+How are key numerical features (e.g., victim age, latitude, longitude, crime occurrence time) correlated with each other?
+
+#### The Code
+
+How are key numerical features (e.g., victim age, latitude, longitude, crime occurrence time) correlated with each other?
+
+![image](https://github.com/user-attachments/assets/9524c220-4ae6-434a-87db-2d41920f0419)
+
 
 ### 9.Crime Summary by Crime Type and Area
+The Crime Summary by Crime Type and Area section provides a comprehensive overview of the frequency and nature of various crime types across different geographical areas. This analysis involves grouping the data by crime type and area to calculate the total number of incidents and the average age of victims associated with each crime category. Additionally, it examines how victim age correlates with total crime counts, offering insights into demographic patterns within crime statistics. By visualizing this information, stakeholders can identify prevalent crime types in specific areas, assess victim demographics, and develop targeted interventions to enhance public safety and address community-specific needs.
+
+#### The questions we are trying to answer in this section
+
+What are the counts of different types of crimes occurring in various areas, and what is the average age of victims for these crimes?
+
+How does the average victim age relate to the total crime count in different areas?
+
+What are the patterns of crime occurrences throughout the day based on the time they occurred, particularly for the most common crime types?
+
+#### The Code
+
+What are the counts of different types of crimes occurring in various areas, and what is the average age of victims for these crimes?
+
+![image](https://github.com/user-attachments/assets/0702b6bf-8ca4-4822-86ae-7aaf8355c734)
+
+
+How does the average victim age relate to the total crime count in different areas?
+
+![image](https://github.com/user-attachments/assets/e4fad7d7-a76c-4c31-8226-2284c54e1ef9)
+
+
+What are the patterns of crime occurrences throughout the day based on the time they occurred, particularly for the most common crime types?
+
+![image](https://github.com/user-attachments/assets/78644155-a496-4b4c-8842-761886a56311)
+
+![image](https://github.com/user-attachments/assets/56ea423c-cf9d-4942-8494-708a11af52a2)
+
