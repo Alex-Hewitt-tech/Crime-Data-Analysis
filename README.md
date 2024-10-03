@@ -3,7 +3,10 @@
 This project analyzes crime data from 2020 to the present from the City of Los Angeles using a comprehensive approach that includes data cleaning, visualization, and statistical analysis. The dataset contains various attributes, including victim age, crime type, weapon used, and geographic location. Key findings reveal trends in crime occurrences over time, seasonal patterns, and relationships between victim demographics and crime statistics. Visualization techniques, such as box plots, line graphs, and heatmaps, effectively illustrate the data insights, highlighting significant patterns like weapon usage and crime counts by area and time of day. Overall, the analysis provides valuable insights into crime dynamics, which can inform policy-making and community safety initiatives.
 
 ## Code Setup
-You can easily download the crime data from the "data" folder in this repository, specifically the file named Crime_Data_from_2020_to_Present.csv. To use this dataset, simply ensure that you have the necessary packages installed and then read the data into a DataFrame with the following command:
+The Link to the data is right here make sure you dowlnoad it as a CSV file https://catalog.data.gov/dataset/crime-data-from-2020-to-present 
+
+To use this dataset, ensure you have the necessary packages installed, and then read the data into a DataFrame using the command:
+
 crime_df = pd.read_csv('C:\\Users\\Computer Username\\Downloads\\Crime_Data_from_2020_to_Present.csv')
 ## Code Overview
 
