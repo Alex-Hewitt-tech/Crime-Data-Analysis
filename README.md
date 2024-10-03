@@ -1,4 +1,4 @@
-# Crime-Data-Analysis
+# Crime-Data-Analysis(City of Los Angeles)
 ## Project Summary
 This project analyzes crime data from 2020 to the present from the City of Los Angeles using a comprehensive approach that includes data cleaning, visualization, and statistical analysis. The dataset contains various attributes, including victim age, crime type, weapon used, and geographic location. Key findings reveal trends in crime occurrences over time, seasonal patterns, and relationships between victim demographics and crime statistics. Visualization techniques, such as box plots, line graphs, and heatmaps, effectively illustrate the data insights, highlighting significant patterns like weapon usage and crime counts by area and time of day. Overall, the analysis provides valuable insights into crime dynamics, which can inform policy-making and community safety initiatives.
 
