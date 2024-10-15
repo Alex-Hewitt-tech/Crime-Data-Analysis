@@ -5,7 +5,7 @@ This project analyzes crime data from 2020 to the present from the City of Los A
 ## Code Setup
 The Link to the data is right here make sure you dowlnoad it as a CSV file https://catalog.data.gov/dataset/crime-data-from-2020-to-present 
 
-To use this dataset, ensure you have the necessary packages installed, and then read the data into a DataFrame using the command:
+Also download the code named Crime_Analysis.py in the src folder. To use this dataset ensure you have the necessary packages installed, and then read the data into a DataFrame using the command:
 
 crime_df = pd.read_csv('C:\\Users\\Computer Username\\Downloads\\Crime_Data_from_2020_to_Present.csv')
 ## Code Overview
